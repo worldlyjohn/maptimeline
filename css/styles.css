@@ -1,0 +1,74 @@
+.mapContextMenu{
+	position:absolute;
+	width:200px;
+	border:1px solid DimGray;
+	background-color:white;
+	font-family:Arial;
+	line-height:20px;
+	cursor:default;
+	font-size:12px;
+	z-index:100;
+	visibility:hidden;
+}
+
+.mapContextMenu div {
+	color: black;
+	background: white;
+	text-decoration:bold;
+	font-size:12px;
+	line-height:16px;
+	font-family: Verdana;
+	padding-left:10px;
+	padding-right:10px;	
+}
+
+.mapContextMenu div:hover {
+	color: black;
+	background: AliceBlue;
+}
+
+.mapTextInput {
+    border:0;
+	font-family:Verdana;
+	font-size:12px;
+	line-height:16px;
+}
+
+.mapNoteBox {
+	padding-right:7px;
+	font-family:Verdana;
+	font-size:12px;
+	line-height:16px;
+}
+
+.mapNoteBox textarea {
+    border:None;
+	font-family:Verdana;
+	font-size:12px;
+	line-height:16px;
+}
+
+.mapNoteBox hr {
+	width:180px;
+}
+
+.mapNoteBox a { color:DarkBlue; cursor:pointer;}
+
+.timeline-event-bubble-title{
+    color: #000;
+}
+.timeline-event-bubble-body{
+    color: #000;
+    height:200px;
+    overflow-y:scroll;
+}
+.timeline-event-bubble-time{
+    color: #777;
+}
+.timeline-event-bubble-wiki{
+    color: #777;
+}
+
+div.olControlMousePosition {
+    left: 3px;
+}

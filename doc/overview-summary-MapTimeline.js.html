@@ -1,0 +1,1268 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+ Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="MapTimeline.js Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b></b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>MapTimeline.js</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		This class represents an object that gives a single
+ entry point to synchronize a <a href='http://simile.mit.edu/timeline/docs/'>Simile Timeline</a> and <a href='http://dev.openlayers.org/releases/OpenLayers-2.7/doc/apidocs/files/OpenLayers/Map-js.html'>OpenLayersMap</a>.
+
+ <BR/><BR/><B>Version: </B>0.8 (2008/01/01)<BR/><BR/><B>Author:</B> John Brennan <john@janisb.com>
+ <BR/>
+	
+</p>
+
+<hr>
+
+
+    <table border="1" cellpadding="3" cellspacing="0" width="100%">
+    <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+    <td colspan=2><font size="+2">
+    
+        <b>Class Summary</b>
+    
+    </font></td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="MapTimeline.html">MapTimeline</a></b></td>
+    <td>This MapTimeline class represents an object that gives a single
+ 			entry point to synchronize a <a href='http://simile.mit.edu/timeline/docs/'>Simile Timeline</a> and <a href='http://dev.openlayers.org/releases/OpenLayers-2.7/doc/apidocs/files/OpenLayers/Map-js.html'>OpenLayersMap</a>.</td>
+    </tr>
+    
+    </table>
+    <hr/> 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview"><span class="comment">/** 
+ * <span class="attrib">@fileoverview</span>
+ * This class represents an object that gives a single
+ * entry point to synchronize a {<span class="attrib">@link</span> http://simile.mit.edu/timeline/docs/ Simile Timeline} and {<span class="attrib">@link</span> http://dev.openlayers.org/releases/OpenLayers-2.7/doc/apidocs/files/OpenLayers/Map-js.html OpenLayersMap}.
+ *
+ * <span class="attrib">@author</span> John Brennan &lt;john<span class="attrib">@janisb</span>.com&gt;
+ * <span class="attrib">@version</span> 0.8 (2008/01/01)
+ */</span>
+ 
+ 
+<span class="comment">/**
+ * Construct a new MapTimeline object.
+ *
+ * Usage:
+ *       var mt = new MapTimeline();
+ *       mt.initMap('map');
+ *       mt.initTimeline('timeline');
+ *
+ * <span class="attrib">@class</span> This MapTimeline class represents an object that gives a single
+ * 			entry point to synchronize a {<span class="attrib">@link</span> http://simile.mit.edu/timeline/docs/ Simile Timeline} and {<span class="attrib">@link</span> http://dev.openlayers.org/releases/OpenLayers-2.7/doc/apidocs/files/OpenLayers/Map-js.html OpenLayersMap}.
+ * <span class="attrib">@constructor</span>
+ * <span class="attrib">@param</span> my_options see {<span class="attrib">@link</span> MapTimeline#options}
+ * <span class="attrib">@return</span> A new MapTimeline object
+ */</span>
+<span class="reserved">function</span> MapTimeline(my_options) {
+    <span class="comment">// =================================================================</span>
+    <span class="comment">// PUBLIC VARS</span>
+    <span class="comment">// =================================================================</span>
+    
+	<span class="comment">/**
+	 * A list of key/value pairs to customize object itself.  
+	 *
+	 *  Example: 
+	 *       {
+	 *           'zoom': 2,
+	 *           'mapcenter': {'lat':27, 'lon':67},
+	 *           'timecenter': new Date("February 10, 1952 12:00:00"),
+	 *           'markerOff': {'url': 'http://www.yourdomain.com/image.png', 'width': 21, 'height': 25},
+	 *           'markerOn': {'url': 'http://www.yourdomain.com/image-hover.png', 'width': 21, 'height': 25}
+	 *       };
+	 * <span class="attrib">@type</span> {}
+	 */</span>
+    <span class="reserved">this</span>.options = {
+        <span class="literal">'zoom'</span>: null,
+        <span class="literal">'mapcenter'</span>: {<span class="literal">'lat'</span>:0,<span class="literal">'lon'</span>:0},
+        <span class="literal">'timecenter'</span>: new Date(),
+        <span class="literal">'markerOff'</span>: {<span class="literal">'url'</span>: OpenLayers.Util.getImagesLocation()+<span class="literal">"marker-blue.png"</span>, <span class="literal">'width'</span>: 21, <span class="literal">'height'</span>: 25},
+        <span class="literal">'markerOn'</span>: {<span class="literal">'url'</span>: OpenLayers.Util.getImagesLocation()+<span class="literal">"marker-gold.png"</span>, <span class="literal">'width'</span>: 21, <span class="literal">'height'</span>: 25}
+    };
+    
+    
+    <span class="comment">// =================================================================</span>
+    <span class="comment">// PRIVATE VARS</span>
+    <span class="comment">// =================================================================</span>
+    
+    <span class="comment">// map vars</span>
+    var _map = null;
+    var _mapLayers = {<span class="literal">'main'</span>: null, <span class="literal">'georss'</span>: null, <span class="literal">'markers'</span>: null};
+    var _timelineMarkers = new Array();
+    var _nonTimelineMarkers = new Array();
+    var _highlightMarkers = new Array();
+    var _mapPopups = null;
+
+    <span class="comment">// timeline vars</span>
+    var _tl = null;
+    var _eventSource = null;
+    var _mainBandIdx = 0;
+
+    <span class="comment">// stores ref to resize timer    </span>
+    var resizeTimerID = null;
+    
+    <span class="comment">// By convention, we make a private 'this' parameter.</span>
+    <span class="comment">// This is used to make the object available to the private methods.</span>
+    <span class="comment">// This is a workaround for an error in the ECMAScript Language Specification </span>
+    <span class="comment">// which causes this to be set incorrectly for inner functions.</span>
+    var this_ref = <span class="reserved">this</span>;
+    
+    
+    <span class="comment">// =================================================================</span>
+    <span class="comment">// PRIVATE FUNCTIONS</span>
+    <span class="comment">// =================================================================</span>
+   
+    <span class="comment">/**
+     * initialization constructor automatically called by instantiation
+     *
+     * <span class="attrib">@private</span>
+     */</span>
+   <span class="reserved">function</span> _init(options){
+        DEBUG.debug(<span class="literal">'MapTimeline:init'</span>);
+        _setOptions(options);
+        
+        <span class="comment">// event handlers    </span>
+        DEBUG.debug(<span class="literal">'MapTimeline:create:  adding event handlers'</span>);
+        <span class="comment">//Event.observe(window, 'resize', _onResize.bindAsEventListener(this_ref), false);</span>
+    };
+    
+    <span class="comment">/**
+     * sets options to use for object by merging user defined options with default settings
+     *
+     * <span class="attrib">@private</span>
+     */</span>
+    <span class="reserved">function</span> _setOptions(options){
+        options = options || {};
+        this_ref.options.zoom = parseInt(options.zoom) || this_ref.options.zoom;
+        <span class="reserved">if</span> (options.mapcenter){
+            this_ref.options.mapcenter.lat = parseFloat(options.mapcenter.lat) || this_ref.options.mapcenter.lat;
+            this_ref.options.mapcenter.lon = parseFloat(options.mapcenter.lon) || this_ref.options.mapcenter.lon;
+        }
+        this_ref.options.timecenter = options.timecenter || this_ref.options.timecenter;
+        this_ref.options.markerOff = options.markerOff || this_ref.options.markerOff;
+        this_ref.options.markerOn = options.markerOn || this_ref.options.markerOn;
+    };
+    
+    <span class="comment">/**
+     * called by window's resize event
+     *
+     * <span class="attrib">@private</span>
+     */</span>
+    <span class="reserved">function</span> _onResize(){
+        <span class="reserved">if</span> (resizeTimerID == null) {
+            resizeTimerID = setTimeout(<span class="reserved">function</span>() {
+                DEBUG.log(<span class="literal">'MapTimeline:_onResize'</span>);
+                resizeTimerID = null;
+                _tl.layout();
+            }, 500);
+        }
+    };
+    
+    
+    <span class="comment">// =================================================================</span>
+    <span class="comment">// PUBLIC FUNCTIONS</span>
+    <span class="comment">// =================================================================</span>
+
+    <span class="comment">// map functions</span>
+    <span class="comment">// -----------------------------------------------------------------</span>
+        
+    <span class="comment">/**
+     * Initializes OpenLayers Map
+     *
+     * <span class="attrib">@param</span> {String} div Id of an element in your page that will contain the map.
+     * <span class="attrib">@param</span> {Object} map_options (optional) OpenLayer.Map properties to add directly to the map.
+     * <span class="attrib">@param</span> {Object} cfg_options (optional) MapTimeline properties to use in this wrapper. You can override the WMS being used here. You can also toggle the marker layer here.
+     *          var my_cfg_options = {
+     *              'mainWMS': {
+     *                  'title': 'OpenLayers WMS', 
+     *                  'url': 'http://labs.metacarta.com/wms/vmap0', 
+     *                  'options': {'layers':'basic'}
+     *              },
+     *              'markerLayer': {
+     *                  'displayInLayerSwitcher': true
+     *              }
+     *          };
+     * <span class="attrib">@see</span> {<span class="attrib">@link</span> http://dev.openlayers.org/releases/OpenLayers-2.7/doc/apidocs/files/OpenLayers/Map-js.html OpenLayers Documentation}
+     */</span>
+    <span class="reserved">this</span>.initMap = <span class="reserved">function</span>(div, map_options, cfg_options){
+        DEBUG.debug(<span class="literal">'MapTimeline:initMap'</span>);
+        
+        <span class="comment">// init cfg options</span>
+        var default_cfg_options = {
+            <span class="literal">'mainWMS'</span>: {
+                <span class="literal">'title'</span>: <span class="literal">'OpenLayers WMS'</span>, 
+                <span class="literal">'url'</span>: <span class="literal">'http://labs.metacarta.com/wms/vmap0'</span>, 
+                <span class="literal">'options'</span>: {<span class="literal">'layers'</span>:<span class="literal">'basic'</span>}
+            },
+            <span class="literal">'markerLayer'</span>: {
+                <span class="literal">'displayInLayerSwitcher'</span>: false
+            }
+        };
+        map_options = map_options || {maxResolution:<span class="literal">'auto'</span>};
+        cfg_options = cfg_options || {};
+        cfg_options.mainWMS = cfg_options.mainWMS || default_cfg_options.mainWMS;
+        cfg_options.mainWMS.title = cfg_options.mainWMS.title || default_cfg_options.mainWMS.title;
+        cfg_options.mainWMS.url = cfg_options.mainWMS.url || default_cfg_options.mainWMS.url;
+        cfg_options.mainWMS.options = cfg_options.mainWMS.options || default_cfg_options.mainWMS.options;
+        cfg_options.markerLayer = cfg_options.markerLayer || default_cfg_options.markerLayer;
+        cfg_options.markerLayer.displayInLayerSwitcher = cfg_options.markerLayer.displayInLayerSwitcher || default_cfg_options.markerLayer.displayInLayerSwitcher;
+        
+    
+        _map = new OpenLayers.Map(div, map_options);
+        
+        <span class="comment">//</span>
+        <span class="comment">// Add default map layers</span>
+        <span class="comment">// all layers added to &lt;_mapLayers&gt; can be accessed by other methods</span>
+        <span class="comment">//</span>
+    
+        <span class="comment">// add main WMS layer</span>
+        _mapLayers.main = new OpenLayers.Layer.WMS(cfg_options.mainWMS.title, cfg_options.mainWMS.url, cfg_options.mainWMS.options); 
+        
+        <span class="comment">// add markers layer    </span>
+        _mapLayers.markers = new OpenLayers.Layer.Markers(<span class="literal">"Markers"</span>, {displayInLayerSwitcher: cfg_options.markerLayer.displayInLayerSwitcher});
+        
+        <span class="comment">// add all layers so far</span>
+        _map.addLayers([_mapLayers.main, _mapLayers.markers]);
+            
+                
+        <span class="comment">//</span>
+        <span class="comment">// Set map center</span>
+        <span class="comment">//</span>
+        
+        <span class="reserved">if</span> (<span class="reserved">this</span>.options.mapcenter.lon != null &amp;&amp; <span class="reserved">this</span>.options.mapcenter.lat != null){
+            <span class="reserved">if</span> (<span class="reserved">this</span>.options.zoom != null)
+                <span class="reserved">this</span>.setMapCenter(<span class="reserved">this</span>.options.mapcenter.lat, <span class="reserved">this</span>.options.mapcenter.lon, <span class="reserved">this</span>.options.zoom);
+            <span class="reserved">else</span>
+                <span class="reserved">this</span>.setMapCenter(<span class="reserved">this</span>.options.mapcenter.lat, <span class="reserved">this</span>.options.mapcenter.lon);
+        }
+        <span class="reserved">else</span>{
+            _map.zoomToMaxExtent();
+        }
+    };
+    
+    <span class="comment">/**
+     * Adds a listener to the map when an event is clicked
+     *
+     * <span class="attrib">@ignore</span>
+     * <span class="attrib">@param</span> listener Function to be fired
+     */</span>
+    <span class="reserved">this</span>.addOnSelectListenerToMap = <span class="reserved">function</span>(listener){
+        DEBUG.warn(<span class="literal">'MapTimeline:addOnSelectListener:  add listen to Map - not yet implemented'</span>);
+    };
+    
+    <span class="comment">/**
+     * Adds a listener to the map when event(s) are added
+     *
+     * <span class="attrib">@ignore</span>
+     * <span class="attrib">@param</span> listener Function to be fired
+     */</span>
+    <span class="reserved">this</span>.addOnAddListenerToMap = <span class="reserved">function</span>(listener){
+        DEBUG.warn(<span class="literal">'MapTimeline:addOnAddListenerToMap:  add listen to Map - not yet implemented'</span>);
+    };
+    
+    <span class="comment">/**
+     * Sets map center and optional zoom
+     *
+     * <span class="attrib">@param</span> lat Integer
+     * <span class="attrib">@param</span> lon Integer
+     * <span class="attrib">@param</span> zoom Integer (optional)
+     */</span>
+    <span class="reserved">this</span>.setMapCenter = <span class="reserved">function</span>(lat, lon, zoom){
+        lat = lat || 0;
+        lon = lon || 0;
+        zoom = zoom || null;
+        
+        <span class="reserved">if</span> (lon != null &amp;&amp; lat != null){
+            DEBUG.debug(<span class="literal">'MapTimeline:setMapCenter:  lon='</span>+lon+<span class="literal">', lat='</span>+lat+<span class="literal">', zoom='</span>+zoom);
+            _map.setCenter(new OpenLayers.LonLat(lon, lat), zoom);
+        }
+        <span class="reserved">else</span>{
+            DEBUG.debug(<span class="literal">'MapTimeline:setMapCenter:  one or more values are null.  did not set.'</span>);
+        }
+    };
+    
+    <span class="comment">/**
+     * Returns current map center
+     *
+     * <span class="attrib">@return</span> {OpenLayers.LonLat}
+     */</span>
+    <span class="reserved">this</span>.getMapCenter = <span class="reserved">function</span>(){
+        <span class="reserved">return</span> _map.getCenter();
+    };
+        
+    <span class="comment">/**
+     * Sets zoom level
+     *
+     * <span class="attrib">@param</span> Integer i 
+     */</span>
+    <span class="reserved">this</span>.setZoom = <span class="reserved">function</span>(i){
+        _map.zoomTo(i);
+    };
+    
+    <span class="comment">/**
+     * Returns current zoom level
+     *
+     * <span class="attrib">@return</span> {Integer}
+     */</span>
+    <span class="reserved">this</span>.getZoom = <span class="reserved">function</span>(){
+        <span class="reserved">return</span> _map.getZoom();
+    };
+    
+    <span class="comment">/**
+     * Highlights the requested marker
+     *
+     * <span class="attrib">@param</span> {MMarker} mmarker The marker to be highlighted
+     */</span>
+    <span class="reserved">this</span>.highlightMarker = <span class="reserved">function</span>(mmarker){
+        <span class="comment">// clear any markers that were highlighted</span>
+        <span class="reserved">this</span>.unHighlightMarkers();
+        
+        <span class="comment">// highlight this marker</span>
+        mmarker.setMarkerIcon(<span class="reserved">this</span>.options.markerOn.url, <span class="reserved">this</span>.options.markerOn.width, <span class="reserved">this</span>.options.markerOn.height);
+        _highlightMarkers.push(mmarker);
+    }
+    
+    <span class="comment">/**
+     * Un-highlights all markers
+     */</span>
+    <span class="reserved">this</span>.unHighlightMarkers = <span class="reserved">function</span>(){
+        <span class="comment">// clear any markers that were highlighted</span>
+        <span class="reserved">for</span> (var index = 0, len = _highlightMarkers.length; index &lt; len; ++index) {
+            <span class="reserved">this</span>.unHighlightMarker(_highlightMarkers[index]);
+        }
+        
+        _highlightMarkers = [];
+    }
+    
+    <span class="comment">/**
+     * Un-highlights the requested marker
+     *
+     * <span class="attrib">@param</span> {MMarker} mmarker The marker to be unhighlighted
+     */</span>
+    <span class="reserved">this</span>.unHighlightMarker = <span class="reserved">function</span>(mmarker){
+        <span class="comment">// remove from highlights array before we change the obj</span>
+        _highlightMarkers = _highlightMarkers.splice(_highlightMarkers.indexOf(mmarker), 1);
+        
+        <span class="comment">// revert marker back to original color</span>
+        mmarker.setMarkerIcon(<span class="reserved">this</span>.options.markerOff.url, <span class="reserved">this</span>.options.markerOff.width, <span class="reserved">this</span>.options.markerOff.height);
+    }
+    
+    <span class="comment">/**
+     * Displays the marker if it is not already displayed
+     *
+     * <span class="attrib">@param</span> {MMarker} mmarker The marker to be displayed
+     */</span>
+    <span class="reserved">this</span>.showMarker = <span class="reserved">function</span>(mmarker){
+        DEBUG.debug(<span class="literal">'MapTimeline:showMarker:  entering...'</span>);
+        <span class="reserved">if</span>(!mmarker.isHidden()){
+            <span class="reserved">return</span>;
+        }
+    
+        <span class="comment">// show marker if hidden</span>
+        DEBUG.debug(<span class="literal">'MapTimeline:showMarker:  enabling marker (#'</span>+ mmarker.getEvent().getID() +<span class="literal">')'</span>);
+        mmarker.show();
+        
+        <span class="comment">// get marker ref</span>
+        marker = mmarker.getMarker();
+        
+        <span class="comment">// add marker to layer</span>
+        _mapLayers.markers.addMarker(marker);
+        
+        <span class="comment">// register mouse event</span>
+        DEBUG.debug(<span class="literal">'MapTimeline:showMarker:  registering event'</span>);
+        mousedown = mmarker.getEventFunction();
+        
+        <span class="comment">// 'this' gets lost in scopes, so let's make a reference to it</span>
+        this_ref = <span class="reserved">this</span>;
+        
+        <span class="comment">// an event handler can only take single argument, so let's wrap it so we can send additional arguments to the function</span>
+        var mousedown_wrapper = <span class="reserved">function</span>(evt){ mousedown(evt, this_ref, mmarker); };
+        
+        <span class="comment">// register with marker</span>
+        marker.events.register(<span class="literal">"mousedown"</span>, marker, mousedown_wrapper);
+
+        <span class="reserved">if</span>((mmarker.getFeatureVectors() != null) &amp;&amp; (<span class="reserved">this</span>.getGeoRSSLayer() != null)){
+            _mapLayers.georss.addFeatures(mmarker.getFeatureVectors());
+        }
+    }
+    
+    <span class="comment">/**
+     * Displays an array of markers
+     *
+     * <span class="attrib">@param</span> {MMarker []} mmarkers An array of markers to be displayed
+     */</span>
+    <span class="reserved">this</span>.showMarkers = <span class="reserved">function</span>(mmarkers){
+        <span class="reserved">for</span> (var index = 0, len = mmarkers.length; index &lt; len; ++index) {
+            <span class="reserved">this</span>.showMarker(mmarkers[index]);
+        }
+    }
+    
+    <span class="comment">/**
+     * Hides a marker if it is already displayed 
+     *
+     * <span class="attrib">@param</span> {MMarker} mmarker The marker to be hidden
+     */</span>
+    <span class="reserved">this</span>.hideMarker = <span class="reserved">function</span>(mmarker){
+        <span class="reserved">if</span>(mmarker.isHidden()){
+            <span class="reserved">return</span>;
+        }
+        mmarker.hide();
+        <span class="reserved">if</span>((mmarker.getFeatureVectors() != null) &amp;&amp; (<span class="reserved">this</span>.getGeoRSSLayer() != null)){
+            _mapLayers.georss.removeFeatures(mmarker.getFeatureVectors());
+        }
+    }
+    
+    <span class="comment">/**
+     * Hides an array of markers
+     *
+     * <span class="attrib">@param</span> {MMarker []} mmarkers Markers to be hidden 
+     */</span>
+    <span class="reserved">this</span>.hideMarkers = <span class="reserved">function</span>(mmarkers){
+        <span class="reserved">for</span> (var index = 0, len = mmarkers.length; index &lt; len; ++index) {
+            <span class="reserved">this</span>.hideMarker(mmarkers[index]);
+        }
+    }
+    
+    <span class="comment">/**
+     * Removes the marker from the layer and unregisters marker events
+     *
+     * <span class="attrib">@param</span> {MMarker []} mmarkers Markers array
+     * <span class="attrib">@param</span> {MMarker} mmarker The marker to be removed
+     */</span>
+    <span class="reserved">this</span>.removeMarker = <span class="reserved">function</span>(mmarkers, mmarker){
+        mmarker.hide();
+        
+        <span class="comment">// get marker ref</span>
+        marker = mmarker.getMarker();
+        mousedown = mmarker.getEventFunction();
+        
+        <span class="comment">// remove marker from layer</span>
+        _mapLayers.markers.removeMarker(marker);
+        
+        <span class="comment">// unregister mouse event</span>
+        marker.events.unregister(<span class="literal">"mousedown"</span>, marker, mousedown);
+        
+        <span class="reserved">if</span>((mmarker.getFeatureVectors() != null) &amp;&amp; (<span class="reserved">this</span>.getGeoRSSLayer() != null)){
+            _mapLayers.georss.removeFeatures(mmarker.getFeatureVectors());
+        }
+        
+        <span class="comment">// remove marker from list</span>
+        mmarkers = mmarkers.splice(mmarkers.indexOf(mmarker), 1);
+    }
+    
+    <span class="comment">/**
+     * Removes an array of markers
+     *
+     * <span class="attrib">@param</span> {MMarker []} mmarkers Markers to be removed 
+     */</span>
+    <span class="reserved">this</span>.removeMarkers = <span class="reserved">function</span>(mmarkers){
+        <span class="reserved">if</span> (mmarkers != null) {
+            <span class="reserved">while</span>(mmarkers.length &gt; 0) {
+                <span class="reserved">this</span>.removeMarker(mmarkers, mmarkers[0]);
+            }
+        }
+    }
+    
+    <span class="comment">/**
+     * Filters map markers using a filter function
+     *
+     * <span class="attrib">@param</span> {Function} fn Filter function. Pass it an object with methods getDescription(), getText()
+     */</span>
+    <span class="reserved">this</span>.filterMarkers = <span class="reserved">function</span>(filterFn){
+        <span class="reserved">if</span> (filterFn == null){
+            <span class="comment">// show all markers</span>
+            <span class="reserved">this</span>.showMarkers(_timelineMarkers);
+            <span class="reserved">this</span>.showMarkers(_nonTimelineMarkers);
+        }
+        <span class="reserved">else</span>{
+            <span class="reserved">for</span>(j = 0; j &lt; _timelineMarkers.length; j++){
+                <span class="reserved">if</span>(filterFn(_timelineMarkers[j].tevt) == true){
+                    <span class="reserved">this</span>.showMarker(_timelineMarkers[j]);
+                }
+                <span class="reserved">else</span>{
+                    <span class="reserved">this</span>.hideMarker(_timelineMarkers[j]);
+                }
+            }
+            
+            <span class="reserved">for</span>(k = 0; k &lt; _nonTimelineMarkers.length; k++){
+                <span class="reserved">if</span>(filterFn(_nonTimelineMarkers[k].tevt) == true){
+                    <span class="reserved">this</span>.showMarker(_nonTimelineMarkers[j]);
+                }
+                <span class="reserved">else</span>{
+                    <span class="reserved">this</span>.hideMarker(_nonTimelineMarkers[j]);
+                }
+            }
+        }
+    };
+    
+    <span class="comment">/**
+     * Returns the main WMS layer for the map
+     *
+     * <span class="attrib">@return</span> {OpenLayers.Layer.WMS} layer 
+     */</span>
+    <span class="reserved">this</span>.getMainWMSLayer = <span class="reserved">function</span>(){
+        <span class="reserved">return</span> _mapLayers.main;
+    };
+    
+    <span class="comment">/**
+     * Returns the marker layer for the map
+     *
+     * <span class="attrib">@return</span> {OpenLayers.Layer.Markers} layer 
+     */</span>
+    <span class="reserved">this</span>.getMarkerLayer = <span class="reserved">function</span>(){
+        <span class="reserved">return</span> _mapLayers.markers;
+    };
+    
+    <span class="comment">/**
+     * Get a list of controls of a given class (CLASS_NAME)
+     *
+     * <span class="attrib">@param</span> {OpenLayers.Control} control to add to map 
+     * <span class="attrib">@returns</span> {Array(OpenLayers.Control)} A list of controls matching the given class.  An empty array is returned if no matches are found.
+     */</span>
+    <span class="reserved">this</span>.getControlsByClass = <span class="reserved">function</span>(match){
+        <span class="reserved">return</span> _map.getControlsByClass(match);
+    };
+    
+    <span class="comment">/**
+     * Adds a control to the map
+     *
+     * <span class="attrib">@param</span> {OpenLayers.Control} control to add to map 
+     */</span>
+    <span class="reserved">this</span>.addControl = <span class="reserved">function</span>(control){
+        _map.addControl(control);
+    };
+    
+    <span class="comment">/**
+     * Removes a control from the map
+     *
+     * <span class="attrib">@param</span> {OpenLayers.Control} control to remove from map 
+     */</span>
+    <span class="reserved">this</span>.removeControl = <span class="reserved">function</span>(control){
+        _map.removeControl(control);
+    };
+    
+    <span class="comment">/**
+     * Removes a layer from the map
+     *
+     * <span class="attrib">@param</span> {OpenLayers.Layer} layer 
+     */</span>
+    <span class="reserved">this</span>.addLayer = <span class="reserved">function</span>(layer){
+        _map.addLayer(layer);
+    
+        <span class="comment">// move markers layer above all other layers</span>
+        _map.raiseLayer(_mapLayers.markers, 1);
+        <span class="reserved">if</span> (<span class="reserved">this</span>.getGeoRSSLayer() != null){
+            _map.raiseLayer(_mapLayers.georss, 1);
+        }
+    };
+    
+    <span class="comment">/**
+     * Removes a layer from the map
+     *
+     * <span class="attrib">@param</span> {OpenLayers.Layer} layer 
+     */</span>
+    <span class="reserved">this</span>.removeLayer = <span class="reserved">function</span>(layer){
+        layer.destroy();
+    };
+  
+    <span class="comment">/**
+     * Gets a layer from the map based on layer ID
+     *
+     * <span class="attrib">@param</span> {String} A layer id
+     * <span class="attrib">@returns</span> {OpenLayers.Layer} The Layer with the corresponding id from the map’s layer collection, or null if not found.
+     */</span>
+    <span class="reserved">this</span>.getLayer = <span class="reserved">function</span>(layer_id){
+        <span class="reserved">return</span> _map.getLayer(layer_id);
+    };
+    
+    <span class="comment">/**
+     * Adds a WMS layer to the map
+     *
+     * <span class="attrib">@param</span> {String} name
+     * <span class="attrib">@param</span> {String} url
+     * <span class="attrib">@param</span> {Object} options
+     * <span class="attrib">@return</span> {OpenLayers.Layer.WMS}
+     */</span>
+    <span class="reserved">this</span>.addWMSLayer = <span class="reserved">function</span>(name, url, options){
+        wms = new OpenLayers.Layer.WMS(name, url, options);
+        _map.addLayer(wms);
+    
+        <span class="comment">// move markers layer above all other layers</span>
+        <span class="reserved">if</span> (<span class="reserved">this</span>.getGeoRSSLayer() != null){
+            _map.raiseLayer(_mapLayers.georss, 1);
+        }
+        _map.raiseLayer(_mapLayers.markers, 1);
+        
+        <span class="reserved">return</span> wms;
+    };
+    
+    <span class="comment">/**
+     * Removes a WMS layer from the map
+     *
+     * <span class="attrib">@param</span> {OpenLayers.Layer.WMS} layer
+     */</span>
+    <span class="reserved">this</span>.removeWMSLayer = <span class="reserved">function</span>(layer){
+        <span class="reserved">this</span>.removeLayer(layer);
+    };
+    
+    
+    <span class="comment">// timeline functions</span>
+    <span class="comment">// -----------------------------------------------------------------</span>
+    
+    <span class="comment">/**
+     * Initializes Timeline
+     * see {<span class="attrib">@link</span> http://simile.mit.edu/timeline/docs/} for more options
+     *
+     * <span class="attrib">@param</span> {String} div Id of an element in your page that will contain the map.
+     * <span class="attrib">@param</span> {Timeline.createBandInfo[]} bandInfos is an array of Timeline.createBandInfo objects
+     * <span class="attrib">@param</span> {Timeline.HORIZONTAL} orientation of the timeline (Timeline.HORIZONTAL | Timeline.VERTICAL)
+     * <span class="attrib">@param</span> {Timeline.DefaultEventSource} eventSrc an event source that provides events to be painted on this band, e.g., new Timeline.DefaultEventSource(). It can be null, which means the band is empty.
+     * <span class="attrib">@param</span> {Integer} bandIdx an index into bandInfos that we will associate event handlers with
+     */</span>
+    <span class="reserved">this</span>.initTimeline = <span class="reserved">function</span>(div, bandInfos, orientation, eventSrc, bandIdx){
+        DEBUG.debug(<span class="literal">'MapTimeline:initTimeline'</span>);
+        
+        <span class="comment">// use given bands or define a default band to use</span>
+        <span class="reserved">if</span> (bandInfos == null){
+            eventSrc = new Timeline.DefaultEventSource(0);
+            bandInfos = [
+                Timeline.createBandInfo({
+                    eventSource:    eventSrc,
+                    width:          <span class="literal">"70%"</span>, 
+                    intervalUnit:   Timeline.DateTime.DAY, 
+                    intervalPixels: 100
+                }),
+                Timeline.createBandInfo({
+                    overview:       true,
+                    eventSource:    eventSrc,
+                    width:          <span class="literal">"30%"</span>, 
+                    intervalUnit:   Timeline.DateTime.MONTH, 
+                    intervalPixels: 300
+                })
+            ];
+            bandInfos[1].syncWith = 0;
+            bandInfos[1].highlight = true;
+        }
+    
+        <span class="comment">// must define an event source to add events to the band</span>
+        <span class="comment">// doc: http://simile.mit.edu/wiki/How_to_Create_Timelines</span>
+        _eventSource = eventSrc;
+        
+        <span class="comment">// we will be adding event listeners to this band index</span>
+        <span class="comment">// here we are attaching them to the first, or HOUR, band</span>
+        <span class="reserved">if</span> (bandIdx == null){
+            DEBUG.debug(<span class="literal">'MapTimeline:initTimeline no bandIdx given. using default.'</span>);
+        }
+        _mainBandIdx = bandIdx || 0;
+        
+        <span class="comment">// now lets build the timeline</span>
+        _tl = Timeline.create(document.getElementById(div), bandInfos, orientation);
+        
+        <span class="comment">// add listener to timeline so we can communicate that info to the map </span>
+        var mapActionsOnTimelineClick = <span class="reserved">function</span>(eventId){
+            <span class="comment">// get event from source </span>
+            var evt = _eventSource.getEvent(eventId);
+            
+            <span class="comment">//Search the global timelineMarkers to see if the evt is registered with the map</span>
+            var timeMarker = <span class="reserved">this</span>.searchMarkersForEvent(evt, _timelineMarkers);
+        
+            <span class="comment">//if the event is mapped, display it's marker</span>
+            <span class="reserved">if</span>(timeMarker != null){
+                <span class="comment">// highlight the marker</span>
+                <span class="reserved">this</span>.highlightMarker(timeMarker);
+                    
+                <span class="comment">// center map on the marker</span>
+                var point = timeMarker.getPoint();
+                <span class="reserved">this</span>.setMapCenter(point.lat, point.lon);
+            }
+            <span class="reserved">else</span>{
+                <span class="comment">// event is not associated with a map marker, so lets</span>
+                <span class="comment">// remove all highlighted markers</span>
+                <span class="reserved">this</span>.unHighlightMarkers();
+            }
+        }
+        <span class="reserved">this</span>.addOnSelectListenerToTimeline(mapActionsOnTimelineClick.bindAsEventListener(<span class="reserved">this</span>));
+        <span class="reserved">this</span>.setTimeCenter(this_ref.options.timecenter);
+    };
+    
+    <span class="comment">/**
+     * Adds a listener to the timeline when an event is clicked
+     *
+     * <span class="attrib">@param</span> listener Function to be fired.  e.g.  function(evtID){}
+     */</span>
+    <span class="reserved">this</span>.addOnSelectListenerToTimeline = <span class="reserved">function</span>(listener){
+        <span class="comment">// right now event listener is only added to main band</span>
+        _tl.getBand(_mainBandIdx).getEventPainter().addOnSelectListener(listener);
+    };
+    
+    <span class="comment">/**
+     * Adds a listener to the timeline when event(s) are added
+     *
+     * <span class="attrib">@param</span> listener Function to be fired.  (no params sent to func unless you use onAddOne instead of onAddMany)
+     */</span>
+    <span class="reserved">this</span>.addOnAddListenerToTimeline = <span class="reserved">function</span>(listener){
+        _tl.getBand(_mainBandIdx).getEventSource().addListener({onAddMany: listener.bindAsEventListener(<span class="reserved">this</span>), onAddOne: listener.bindAsEventListener(<span class="reserved">this</span>)});
+    };
+    
+    <span class="comment">/**
+     * Sets timeline center
+     *
+     * <span class="attrib">@param</span> {Date} date to center around
+     */</span>
+    <span class="reserved">this</span>.setTimeCenter = <span class="reserved">function</span>(date){
+        _tl.getBand(_mainBandIdx).setCenterVisibleDate(date);
+    };
+    
+    <span class="comment">/**
+     * Gets timeline center
+     *
+     * <span class="attrib">@return</span> {Date} current date center point
+     */</span>
+    <span class="reserved">this</span>.getTimeCenter = <span class="reserved">function</span>(){
+        var date = _tl.getBand(_mainBandIdx).getCenterVisibleDate();
+        <span class="reserved">return</span> date;
+    };
+    
+
+    <span class="comment">// -----------------------------------------------------------------</span>
+    <span class="comment">// shared functions</span>
+    <span class="comment">// -----------------------------------------------------------------</span>
+    
+    <span class="comment">/**
+     * Adds a listener to the timeline and/or map when an event is clicked
+     * (listen on map is not currently implemented)
+     *
+     * <span class="attrib">@param</span> listener Function to be fired
+     * <span class="attrib">@param</span> addtoMap Bool whether we should add listener to map
+     * <span class="attrib">@param</span> addtoTL Bool whether we should add listener to timeline
+     */</span>
+    <span class="reserved">this</span>.addOnSelectListener = <span class="reserved">function</span>(listener, addtoMap, addtoTL){
+        <span class="reserved">if</span> (addtoMap){
+            <span class="reserved">this</span>.addOnSelectListenerToMap(listener);
+        }
+        <span class="reserved">if</span> (addtoTL){
+            <span class="reserved">this</span>.addOnSelectListenerToTimeline(listener);
+        }
+    };
+    
+    <span class="comment">/**
+     * Adds a listener to the timeline and/or map event(s) are added
+     * (listen on map is not currently implemented)
+     *
+     * <span class="attrib">@param</span> listener Function to be fired
+     * <span class="attrib">@param</span> addtoMap Bool whether we should add listener to map
+     * <span class="attrib">@param</span> addtoTL Bool whether we should add listener to timeline
+     */</span>
+    <span class="reserved">this</span>.addOnAddListener = <span class="reserved">function</span>(listener, addtoMap, addtoTL){
+        <span class="reserved">if</span> (addtoMap){
+            <span class="reserved">this</span>.addOnSelectListenerToMap(listener);
+        }
+        <span class="reserved">if</span> (addtoTL){
+            <span class="reserved">this</span>.addOnAddListenerToTimeline(listener);
+        }
+    };
+    
+    <span class="comment">/**
+     * Removes all event data from map and timeline
+     *
+     */</span>
+    <span class="reserved">this</span>.clear = <span class="reserved">function</span>(){
+        <span class="comment">// clear map</span>
+        <span class="reserved">this</span>.removeMarkers(_timelineMarkers);
+        <span class="reserved">this</span>.removeMarkers(_nonTimelineMarkers);
+        
+        <span class="comment">// clear timeline</span>
+        _eventSource.clear();    
+    }
+        
+    <span class="comment">/**
+     * Searches an array of TimeMMarkers for a Timeline.DefaultEventSource.Event. 
+     *
+     * <span class="attrib">@param</span> {Timeline.DefaultEventSource.Event} evt The event to be searched for
+     * <span class="attrib">@param</span> {TimeMMarker []} tmarr The array to be searched
+     * <span class="attrib">@return</span> The timeline marker that contains the event. If no timeline marker in the array has the event, return null
+     */</span>
+    <span class="reserved">this</span>.searchMarkersForEvent = <span class="reserved">function</span>(evt, tmarr){
+        <span class="comment">//if the array is not an array of timeline markers, or the event is not a timeline event, return null</span>
+        <span class="reserved">if</span>(tmarr.length &lt; 0){
+            throw <span class="literal">"Expected array for second parameter"</span>;
+        }
+        
+        <span class="reserved">if</span>(!(tmarr[0] instanceof TimeMMarker) || !(evt instanceof Timeline.DefaultEventSource.Event)){
+            throw <span class="literal">"Expected Timeline.DefaultEventSource.Event for first parameter and TimeMMarker for second"</span>;
+        }
+        <span class="reserved">for</span>(i = 0; i &lt; tmarr.length; i++){
+            <span class="reserved">if</span>(tmarr[i].getEvent() == evt){
+                <span class="reserved">return</span>(tmarr[i]);
+            }
+        }
+        <span class="reserved">return</span> null;
+    };
+    
+    <span class="comment">/**
+     * Returns the requested marker from the array of MMarkers
+     *
+     * <span class="attrib">@param</span> id {string} Event ID to search for
+     * <span class="attrib">@param</span> {MMarker []} marr The array to be searched
+     * <span class="attrib">@return</span> The marker with the given id or null
+     */</span>
+    <span class="reserved">this</span>.getMarkerById = <span class="reserved">function</span>(id, marr){
+        <span class="reserved">if</span>(marr.length &lt; 0){
+            DEBUG.error(<span class="literal">'MapTimeline:getMarkerById:  Expected array for second parameter'</span>);
+            <span class="reserved">return</span> null;
+        }
+        <span class="reserved">else</span> <span class="reserved">if</span>(marr.length == 0){
+            DEBUG.warn(<span class="literal">'MapTimeline:getMarkerById:  MMarker[] doesn\'</span>t contain any markers<span class="literal">');
+            return null;
+        }
+        else if(!(marr[0] instanceof MMarker)){
+            DEBUG.error('</span>MapTimeline:getMarkerById:  Expected MMarker <span class="reserved">for</span> second parameter<span class="literal">');
+            return null;
+        }
+        
+        for(i = 0; i &lt; marr.length; i++){
+            if(marr[i].getId() == id){
+                return(marr[i]);
+            }
+        }
+        DEBUG.debug('</span>MapTimeline:getMarkerById:  Could not find marker #<span class="literal">' + id);
+        return null;
+    };
+    
+    /**
+     * Adds a data point to map and timeline
+     *
+     * @param {String} guid Unique global identifier
+     * @param {String} start (optional) date in the format '</span>2008-04-13 12:58Z<span class="literal">' or null.  If no start then it will only be displayed on the map.
+     * @param {String} end (optional) date in the format '</span>2008-04-13 12:58Z<span class="literal">' or null
+     * @param {String} title Text to display on timeline
+     * @param {String} description Text displayed in popup bubble
+     * @param {Decimal} lat (optional) Latitude
+     * @param {Decimal} lon (optional) Longitude
+     * @param {String} image (optional) URL of image to display in popup bubble
+     * @param {String} link (optional) URL of link to display in popup bubble
+     */
+    this.addEvent = function(guid, start, end, title, description, lat, lon, image, link){
+        this.addEvents([{
+            '</span>id<span class="literal">': guid,
+            '</span>start<span class="literal">': start,
+            '</span>end<span class="literal">': end,
+            '</span>title<span class="literal">': title || "",
+            '</span>description<span class="literal">': description || "",
+            '</span>lat<span class="literal">': lat,
+            '</span>lon<span class="literal">': lon,
+            '</span>image<span class="literal">': image,
+            '</span>link<span class="literal">': link
+        }]);
+    }
+        
+    /**
+     * Adds all data points to map and timeline
+     *
+     * @param data a JSON object (e.g. [{'</span>id<span class="literal">': 23, '</span>start<span class="literal">': '</span>2008-04-13 12:58Z<span class="literal">','</span>end<span class="literal">': '</span>2008-04-13 12:58Z<span class="literal">', '</span>title<span class="literal">': '</span>Example<span class="literal">', '</span>lat<span class="literal">': 10, '</span>lon<span class="literal">': 20, '</span>description<span class="literal">': '</span>text<span class="literal">', '</span>image<span class="literal">': '</span>url<span class="literal">', '</span>link<span class="literal">': '</span>url<span class="literal">' }, ...]
+     * @param format a string defining the event state/end format to be expected (e.g. iso8601) (optional)
+     */
+    this.addEvents = function(data, dateFormat){
+        dateFormat = dateFormat || '</span>iso8601<span class="literal">';
+        data = data || [];
+        
+        // exit if no events
+        if (data.length &lt;= 0){
+            return;
+        }
+        
+        //
+        // add to timeline
+        //
+        DEBUG.debug('</span>MapTimeline:addEvents:  adding events to timeline<span class="literal">');
+        var baseUrl = "/";
+        try{
+            _eventSource.loadJSON({
+                    '</span>dateTimeFormat<span class="literal">': dateFormat,
+                    '</span>events<span class="literal">' : data}, baseUrl);
+        }catch(e){
+            if (e == "TypeError: D is null"){
+                DEBUG.error('</span>MapTimeline:addEvents: Dateformat of event isn\<span class="literal">'t recognized'</span>);
+            }
+            <span class="reserved">else</span>{
+                DEBUG.error(<span class="literal">'MapTimeline:addEvents: '</span>+e);
+            }
+        }
+        DEBUG.debug(<span class="literal">'MapTimeline:addEvents:  timeline-done.'</span>);
+        
+        <span class="comment">//</span>
+        <span class="comment">// add to map</span>
+        <span class="comment">//</span>
+        DEBUG.debug(<span class="literal">'MapTimeline:addEvents:  adding events to map'</span>);
+        
+        <span class="comment">// define onclick handler for map markers</span>
+        var timeMarkerOnClick = <span class="reserved">function</span>(evt, self, mmarker){
+            DEBUG.debug(<span class="literal">'MapTimeline:addEvents:  timeMarkerOnClick event fired'</span>);
+            var markerEvent = mmarker.getEvent();
+            
+            <span class="comment">// define code to execute after we are finished scrolling to focus on event (see 'BUG FIX' reason below)</span>
+            var execAfterScroll = <span class="reserved">function</span>() {
+                <span class="comment">// display timeline popup</span>
+                _tl.getBand(_mainBandIdx).getEventPainter().showBubble(markerEvent);
+            };
+            
+            <span class="comment">// is event in current view</span>
+            var minDate = _tl.getBand(_mainBandIdx).getMinVisibleDate();
+            var maxDate = _tl.getBand(_mainBandIdx).getMaxVisibleDate();
+            var eventInView = ((markerEvent.getStart() &lt; minDate) || (markerEvent.getStart() &gt; maxDate)) ? false : true;
+    
+            <span class="comment">// get associated map marker to highlight</span>
+            var timeMarker = self.searchMarkersForEvent(markerEvent, _timelineMarkers);
+            self.highlightMarker(timeMarker);
+    
+            <span class="comment">// Shift timeline so the corresponding event to the marker is centered on the band</span>
+            <span class="reserved">if</span> ( (eventInView == false) &amp;&amp; (markerEvent.getStart() instanceof Date) ) {
+                _tl.getBand(_mainBandIdx).scrollToCenter(markerEvent.getStart());
+                
+                <span class="comment">// BUG FIX: scrollToCenter() uses a setTimeout in it's animation.run() so it gets fired and execution continues</span>
+                <span class="comment">// therefore we hop into the code below before we are finished scrolling</span>
+                <span class="comment">// it will finish execution after a max of 1 sec, so we pause for 1.5 seconds before continuing (displaying popups)</span>
+                window.setTimeout(execAfterScroll, 1500);
+            }
+            <span class="reserved">else</span>{
+                execAfterScroll();
+            }
+            
+            Event.stop(evt);
+        };
+        var nonTimeMarkerOnClick = <span class="reserved">function</span>(evt, self, mmarker){
+            DEBUG.debug(<span class="literal">'MapTimeline:addEvents:  nonTimeMarkerOnClick event fired'</span>);
+            var markerEvent = mmarker.getEvent();
+            
+            DEBUG.warn(<span class="literal">'MapTimeline:addEvents nonTimeMarkerOnClick not defined because we don\'</span>t have popups on map yet<span class="literal">');
+            
+            Event.stop(evt);
+        };
+        
+        for (var index = 0, len = data.length; index &lt; len; ++index) {
+            var item = data[index];
+            if (item.id == null){
+                DEBUG.warn('</span>MapTimeline:addEvents no id <span class="reserved">for</span> event<span class="literal">');
+            }
+            
+            if(item.lat != null &amp;&amp; item.lon != null){
+                if(item.start != null){
+                    // there is a time associated with event
+                    var lonlat = new OpenLayers.LonLat(item.lon, item.lat);
+                    var size = new OpenLayers.Size(this.options.markerOff.width, this.options.markerOff.height);
+                    var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+                    var url = this.options.markerOff.url;
+                    var icon = new OpenLayers.Icon(url, size, offset);
+                    
+                    var evt = _eventSource.getEvent(item.id);
+                    
+                    var marker = new TimeMMarker(item.id, lonlat, item.description, icon, evt, _tl.getBand(_mainBandIdx), _mapLayers.main, null, timeMarkerOnClick);
+                    
+                    DEBUG.debug('</span>MapTimeline:addEvents:  added new TimeMMarker.  Event id #<span class="literal">' + item.id);
+                    _timelineMarkers.push(marker);
+                }
+                else{
+                    // no time associated with event, so use the MMarker
+                    var lonlat = new OpenLayers.LonLat(item.lon, item.lat);
+                    var size = new OpenLayers.Size(this.options.markerOff.width, this.options.markerOff.height);
+                    var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+                    var url = this.options.markerOff.url;
+                    var icon = new OpenLayers.Icon(url, size, offset);
+                    
+                    var marker = new MMarker(item.id, lonlat, item.description, icon, _mapLayers.main, null, nonTimeMarkerOnClick);
+                    
+                    DEBUG.debug('</span>MapTimeline:addEvents:  added new MMarker.  Event id #<span class="literal">' + item.id);
+                    _nonTimelineMarkers.push(marker);
+                }
+            }
+            else{
+                DEBUG.debug('</span>MapTimeline:addEvents:  added event to timeline, but missing lat/lon <span class="reserved">for</span> map.  Event id #<span class="literal">' + item.id);
+            }
+        }
+        DEBUG.debug('</span>MapTimeline:addEvents:  timelineMarkers count=<span class="literal">'+_timelineMarkers.length+'</span>, nonTimelineMarkers count=<span class="literal">'+_nonTimelineMarkers.length);
+        
+        // show all markers on layer
+        this.showMarkers(_timelineMarkers);
+        
+        DEBUG.debug('</span>MapTimeline:addEvents:  map-done.<span class="literal">');
+    };
+    
+    /*
+     * Remove events given by array
+     *
+     * @param events {array} An array of event objects
+     */
+    this.removeEvents = function(events){
+        DEBUG.debug('</span>MapTimeline:removeEvents:  removing events from map and timeline<span class="literal">');
+        
+        // go through the events to query on its id
+        for (var index = 0, len = events.length; index &lt; len; ++index) {
+            var id = events[index].id;
+            
+            // remove from map
+            var marker = null;
+            marker = this.getMarkerById( id, _timelineMarkers);
+            if (marker != null){
+                DEBUG.debug('</span>MapTimeline:removeEvents:  removing event id #<span class="literal">' + id + '</span> from map (_timelineMarkers)<span class="literal">');
+                this.removeMarker(_timelineMarkers, marker);
+            }
+            else{
+                // not found in timeline markers, so its gotta be in the non TL then
+                marker = this.getMarkerById( id, _nonTimelineMarkers);
+                if (marker != null){
+                    DEBUG.debug('</span>MapTimeline:removeEvents:  removing event id #<span class="literal">' + id + '</span> from map (_nonTimelineMarkers)<span class="literal">');
+                    this.removeMarker(_nonTimelineMarkers, marker);
+                }
+                else{
+                    DEBUG.error('</span>MapTimeline:removeEvents:  event id #<span class="literal">' + id + '</span> was not found in marker arrays. Not removed from map<span class="literal">');
+                }
+            }
+            
+            // remove from timeline
+            DEBUG.debug('</span>MapTimeline:removeEvents:  removing event id #<span class="literal">' + id + '</span> from timeline<span class="literal">');
+            _eventSource.remove( id );
+        }
+        DEBUG.debug('</span>MapTimeline:removeEvents:  done.<span class="literal">');
+    };
+        
+    /*
+     * Filters events to only display those matches
+     *
+     * @param text {string} The text to search for and filter on.  May be a regex like "John|Syp".
+     * @param attribute_list {array} A list of attributes to filter against
+     * @param enable_regex {bool} Whether text should be considered plain text or a regex (default: false)
+     * @see http://developer.mozilla.org/en/Core_JavaScript_1.5_Guide/Regular_Expressions
+     */
+    this.filterEvents = function(text, attribute_list, enable_regex){
+        enable_regex = enable_regex || false;
+        
+        if (enable_regex == false){
+            // since we aren'</span>t enabling regex then we need to escape any chars that could be mistaken <span class="reserved">for</span> regex
+            var specials = [
+                <span class="literal">'/'</span>, <span class="literal">'.'</span>, <span class="literal">'*'</span>, <span class="literal">'+'</span>, <span class="literal">'?'</span>, <span class="literal">'|'</span>,
+                <span class="literal">'('</span>, <span class="literal">')'</span>, <span class="literal">'['</span>, <span class="literal">']'</span>, <span class="literal">'{'</span>, <span class="literal">'}'</span>, <span class="literal">'\\'</span>
+            ];
+            var specials_re = new RegExp(
+                <span class="literal">'(\\'</span> + specials.join(<span class="literal">'|\\'</span>) + <span class="literal">')'</span>, <span class="literal">'g'</span>
+            );
+            text = text.replace(specials_re, <span class="literal">'\\$1'</span>);
+        }
+        
+        <span class="comment">//</span>
+        <span class="comment">// filter timeline</span>
+        <span class="comment">//</span>
+        var filterMatcher = null;
+        <span class="reserved">if</span> (text.length &gt; 0) {
+            try{
+                var regex = new RegExp(text, <span class="literal">"i"</span>);
+                filterMatcher = <span class="reserved">function</span>(evt) {
+                    var exp = false;
+                    var val = <span class="literal">''</span>;
+                    <span class="reserved">for</span> (var i=0, len=attribute_list.length; i &lt; len; i++){
+                        <span class="reserved">if</span> (attribute_list[i] == <span class="literal">'description'</span>){
+                            val = evt.getDescription();
+                        }
+                        <span class="reserved">else</span> <span class="reserved">if</span> (attribute_list[i] == <span class="literal">'title'</span>){
+                            val = evt.getText();
+                        }
+                        exp = exp || regex.test(val);
+                    }
+                    <span class="reserved">return</span> exp;
+                };
+            }catch(e){
+                <span class="comment">// bad reg ex... so filterMatcher stays null</span>
+            }
+        }
+        
+        var bandIndices = _tl.getBandCount();
+        <span class="reserved">for</span> (var bandIdx = 0; bandIdx &lt; bandIndices; bandIdx++) {
+            _tl.getBand(bandIdx).getEventPainter().setFilterMatcher(filterMatcher);
+            <span class="comment">//_tl.getBand(bandIdx).getEventPainter().setHighlightMatcher(highlightMatcher);</span>
+        }
+        _tl.paint();
+        
+        <span class="comment">//</span>
+        <span class="comment">// filter map</span>
+        <span class="comment">//</span>
+        <span class="reserved">this</span>.filterMarkers(filterMatcher);
+    };
+    
+    
+    
+    <span class="comment">// -----------------------------------------------------------------</span>
+    <span class="comment">// start 'er up</span>
+    <span class="comment">// -----------------------------------------------------------------</span>
+    _init(my_options);
+}    
+
+
+
+<span class="comment">/***************************************
+ * Timeline Extensions
+ * this section allows us to add functionality to the Simile Timeline
+ * that it doesn't already have so we can do our job of syncing them.
+ * We don't want to edit the file itself so that we can upgrade with ease,
+ * but some caution may be taken because we are modified the object.
+ */</span>
+
+<span class="comment">/**
+ * Enable ability to remove events from timeline
+ *
+ * <span class="attrib">@ignore</span>
+ */</span>
+Timeline.DefaultEventSource.<span class="reserved">prototype</span>.remove = <span class="reserved">function</span>(id) {
+    <span class="reserved">this</span>._events.remove(id);
+    <span class="reserved">this</span>._fire(<span class="literal">"onClear"</span>, []);
+};
+<span class="comment">/**
+ * <span class="attrib">@ignore</span>
+ */</span>
+SimileAjax.EventIndex.<span class="reserved">prototype</span>.remove = <span class="reserved">function</span>(id) {
+    var evt = <span class="reserved">this</span>._idToEvent[id];
+    <span class="reserved">this</span>._events.remove(evt);
+    delete <span class="reserved">this</span>._idToEvent[id];
+};
+</pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b></b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Tue Dec 23 00:58:09 2008</div>
+</body>
+</html>

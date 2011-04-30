@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>Adding additional layers demo | MapTimeline</title>
+    <link rel="stylesheet" href="../css/styles.css" type="text/css" />
+    
+    <!-- Timeline requires itself to be placed in head -->
+    <script src="../javascript/timeline-2.2.0/timeline_js/timeline-api.js?bundle=true" type="text/javascript"></script>
+</head>
+<body>
+
+	<!-- define placeholders for objects -->
+    <div id="map" style="height: 350px; width: 800px;  border: 1px solid gray; background-color:#7391AD;"></div>
+    <div id="timeline" style="height: 150px; width: 800px; font-family: Arial, Geneva"></div>
+
+    <!-- define scripts for MapTimeline -->
+    <script src="../javascript/OpenLayers-2.7/OpenLayers.js" type="text/javascript"></script>
+	<script src="../javascript/Debug.js" type="text/javascript"></script>
+	<script src="../javascript/Markers.js" type="text/javascript"></script>
+	<script src="../javascript/MapTimeline.js" type="text/javascript"></script>
+	
+	<!-- define user script to customize MapTimeline controls -->
+	<script src="ex-layers.js" type="text/javascript"></script>
+	
+</body>
+</html>

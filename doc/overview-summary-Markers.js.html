@@ -1,0 +1,430 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+ Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="Markers.js Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b></b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>Markers.js</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		This file contains the declaration for the MMarker and TimeMMarker classes. In the TimeMMarker class, 
+ it also specifies what interaction should happen when a map marker with additional Timeline data (i.e. 
+ a TimeMMarker) is clicked
+
+ <BR/><BR/><B>Version: </B>0.8 (2008/01/01)<BR/><BR/><B>Author:</B> John Brennan <john@janisb.com>
+ <BR/>
+	
+</p>
+
+<hr>
+
+
+    <table border="1" cellpadding="3" cellspacing="0" width="100%">
+    <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+    <td colspan=2><font size="+2">
+    
+        <b>Class Summary</b>
+    
+    </font></td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="MMarker.html">MMarker</a></b></td>
+    <td>Represents a marker to be displayed on an OpenLayers map.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="TimeMMarker.html">TimeMMarker</a></b></td>
+    <td>TimeMMarker is an MMarker with an additional associated Simile Timeline.DefaultEventSource.Event.</td>
+    </tr>
+    
+    </table>
+    <hr/> 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview"><span class="comment">/**
+ * <span class="attrib">@fileoverview</span>
+ * This file contains the declaration for the MMarker and TimeMMarker classes. In the TimeMMarker class, 
+ * it also specifies what interaction should happen when a map marker with additional Timeline data (i.e. 
+ * a TimeMMarker) is clicked
+ *
+ * <span class="attrib">@author</span> John Brennan &lt;john<span class="attrib">@janisb</span>.com&gt;
+ * <span class="attrib">@version</span> 0.8 (2008/01/01)
+ */</span>
+
+<span class="comment">/**
+ * <span class="attrib">@class</span>
+ * Represents a marker to be displayed on an OpenLayers map. Also has an associated popup
+ * This class references the OpenLayers Map API and Simile Timeline API. For more information see
+ * {<span class="attrib">@link</span> http://openlayers.org/ OpenLayers} and {<span class="attrib">@link</span> http://simile.mit.edu/timeline/ Simile Timeline}
+ *
+ * <span class="attrib">@constructor</span>
+ * <span class="attrib">@param</span> {String} id A unique string to identify this marker
+ * <span class="attrib">@param</span> {OpenLayers.LonLat} point_in longitude/latitude location of the marker
+ * <span class="attrib">@param</span> {String} html_in HTML text to be displayed in the associated popup
+ * <span class="attrib">@param</span> {OpenLayers.Icon} icon_in Icon for marker
+ * <span class="attrib">@param</span> {OpenLayers.Layer} layer_in Layer for the popup feature to be displayed on (typically a WMS layer)
+ * <span class="attrib">@param</span> {OpenLayers.Feature.Vector} featureVectors_in Array of feature vectors associated with the marker 
+ *        (typically geoRSS). May be null
+ * <span class="attrib">@param</span> {Function} callBack function to call when map marker is clicked
+ */</span>
+<span class="reserved">function</span> MMarker(id, point_in, html_in, icon_in, layer_in, featureVectors_in, callBack){
+	<span class="comment">/**
+	 * <span class="attrib">@type</span> String
+	 */</span>
+    <span class="reserved">this</span>.id = id;
+	<span class="comment">/**
+	 * <span class="attrib">@type</span> Boolean
+	 */</span>
+    <span class="reserved">this</span>.displayed = false;
+	<span class="comment">/**
+	 * <span class="attrib">@type</span> {OpenLayers.Popup}
+	 */</span>
+    <span class="reserved">this</span>.popup = null;
+	<span class="comment">/**
+	 * <span class="attrib">@type</span> {OpenLayers.Feature}
+	 */</span>
+    <span class="reserved">this</span>.feature = null;
+	<span class="comment">/**
+	 * <span class="attrib">@type</span> {OpenLayers.Marker}
+	 */</span>
+    <span class="reserved">this</span>.marker = null;
+	<span class="comment">/**
+	 * <span class="attrib">@type</span> {OpenLayers.Feature.Vector}
+	 */</span>
+    <span class="reserved">this</span>.featureVectors = null;
+    
+	<span class="comment">/**
+	 * <span class="attrib">@type</span> {OpenLayers.Feature Data}
+	 */</span>
+    <span class="reserved">this</span>.featureData = {<span class="literal">'icon'</span>: icon_in} || null;
+	<span class="comment">/**
+	 * <span class="attrib">@type</span> String
+	 */</span>
+    <span class="reserved">this</span>.html = html_in || <span class="literal">""</span>;
+	<span class="comment">/**
+	 * <span class="attrib">@type</span> {OpenLayers.LonLat}
+	 */</span>
+    <span class="reserved">this</span>.point = point_in || null;
+	<span class="comment">/**
+	 * <span class="attrib">@type</span> {OpenLayers.Layer}
+	 */</span>
+    <span class="reserved">this</span>.layer = layer_in || null;
+	<span class="comment">/**
+	 * <span class="attrib">@type</span> {OpenLayers.Feature.Vector}
+	 */</span>
+    <span class="reserved">this</span>.featureVectors = featureVectors_in || null;
+	<span class="comment">/**
+	 * This function is called whenever the marker is clicked
+	 * <span class="attrib">@type</span> Function
+	 */</span>
+    <span class="reserved">this</span>.eventFunction = callBack || <span class="reserved">function</span>(){};
+    
+    <span class="reserved">if</span> (<span class="reserved">this</span>.layer != null &amp;&amp; <span class="reserved">this</span>.point != null){
+        <span class="reserved">this</span>.feature = new OpenLayers.Feature(<span class="reserved">this</span>.layer, <span class="reserved">this</span>.point, <span class="reserved">this</span>.featureData);
+        
+        <span class="comment">// create marker</span>
+        <span class="reserved">this</span>.marker = <span class="reserved">this</span>.feature.createMarker();
+        
+        <span class="comment">// Initially, displayed is false; the marker is turned off</span>
+        <span class="reserved">this</span>.marker.display(<span class="reserved">this</span>.displayed);
+    }
+
+    
+    <span class="comment">/**
+     * <span class="attrib">@return</span> {String} The unique id for this marker 
+     */</span>
+    <span class="reserved">this</span>.getId = <span class="reserved">function</span>(){
+        <span class="reserved">return</span> <span class="reserved">this</span>.id;
+    }
+    <span class="comment">/**
+     * <span class="attrib">@return</span> {OpenLayers.Feature} The feature used to create this MMarker's OpenLayers.Marker. Note: This is NOT NECESSARILY a 
+     *         feature vector. 
+     */</span>
+    <span class="reserved">this</span>.getFeature = <span class="reserved">function</span>(){
+        <span class="reserved">return</span> <span class="reserved">this</span>.feature;
+    }
+    <span class="comment">/**
+     * <span class="attrib">@return</span> {Function} The event function for this marker. Use for events like mousedown, etc. 
+     * See OpenLayers.showMarker() for example usage
+     */</span>
+    <span class="reserved">this</span>.getEventFunction = <span class="reserved">function</span>(){
+        <span class="reserved">return</span> <span class="reserved">this</span>.eventFunction;
+    }
+    <span class="comment">/**
+     * <span class="attrib">@return</span> {String} The HTML to be placed in this marker's popup and displayed upon click
+     */</span>
+    <span class="reserved">this</span>.getHtml = <span class="reserved">function</span>(){
+        <span class="reserved">return</span> <span class="reserved">this</span>.html;
+    }
+    <span class="comment">/**
+     * <span class="attrib">@return</span> {OpenLayers.LonLat} The latitude and longitude of this marker's popup
+     */</span>
+    <span class="reserved">this</span>.getPoint = <span class="reserved">function</span>(){
+        <span class="reserved">return</span> <span class="reserved">this</span>.point;
+    }
+    <span class="comment">/**
+     * <span class="attrib">@param</span> {OpenLayers.LonLat} The latitude and longitude of this marker's popup
+     */</span>
+    <span class="reserved">this</span>.setPoint = <span class="reserved">function</span>(pt){
+        <span class="reserved">this</span>.point=pt;
+    }
+    <span class="comment">/**
+     * <span class="attrib">@return</span> {OpenLayers.Marker} This MMarker's actual OpenLayers.Marker
+     */</span>
+    <span class="reserved">this</span>.getMarker = <span class="reserved">function</span>(){
+        <span class="reserved">return</span> <span class="reserved">this</span>.marker;
+    }
+    <span class="comment">/**
+     * <span class="attrib">@return</span> {OpenLayers.Icon} for marker
+     */</span>
+    <span class="reserved">this</span>.getMarkerIcon = <span class="reserved">function</span>(){
+        <span class="reserved">return</span> <span class="reserved">this</span>.featureData.icon;
+    }
+    <span class="comment">/**
+     * Sets the marker icon
+     * <span class="attrib">@param</span> {String} url
+     * <span class="attrib">@param</span> {Integer} width
+     * <span class="attrib">@param</span> {Integer} height
+     */</span>
+    <span class="reserved">this</span>.setMarkerIcon = <span class="reserved">function</span>(url, width, height){
+        var icon = <span class="reserved">this</span>.featureData.icon;
+        <span class="reserved">if</span> (width != null &amp;&amp; height != null &amp;&amp; (width != icon.width &amp;&amp; height != icon.height)){
+            var size = new OpenLayers.Size(width, height);
+            icon.setSize(size);
+        }
+        icon.url = url;
+        icon.draw();
+    }
+    <span class="comment">/**
+     * Displays this marker
+     */</span>
+    <span class="reserved">this</span>.show = <span class="reserved">function</span>(){
+        <span class="reserved">this</span>.displayed = true;
+    
+        <span class="reserved">this</span>.marker.display(<span class="reserved">this</span>.displayed);
+    }
+    <span class="comment">/**
+     * Hides this marker
+     */</span>
+    <span class="reserved">this</span>.hide = <span class="reserved">function</span>(){
+        <span class="reserved">this</span>.displayed = false;
+        <span class="reserved">this</span>.marker.display(<span class="reserved">this</span>.displayed);
+    }
+    <span class="comment">/**
+     * Sets this marker's current marker to p
+     *
+     * <span class="attrib">@param</span> {OpenLayers.Popup} The new popup to be used
+     */</span>
+    <span class="reserved">this</span>.setPopup = <span class="reserved">function</span>(p){
+        <span class="reserved">this</span>.popup = p;
+    }
+    <span class="comment">/**
+     * <span class="attrib">@return</span> {OpenLayers.Popup} This marker's popup
+     */</span>
+    <span class="reserved">this</span>.getPopup = <span class="reserved">function</span>(){
+        <span class="reserved">return</span> <span class="reserved">this</span>.popup;
+    }
+    <span class="comment">/**
+     * Destroys this marker's popup
+     */</span>
+    <span class="reserved">this</span>.destroyPopup = <span class="reserved">function</span>(){
+        <span class="reserved">this</span>.popup.destroy();
+        <span class="reserved">this</span>.popup = null;
+    }
+    <span class="comment">/**
+     * <span class="attrib">@return</span> {Boolean} True if this marker is hidden. False otherwise
+     */</span>
+    <span class="reserved">this</span>.isHidden = <span class="reserved">function</span>(){
+        <span class="reserved">return</span>(!<span class="reserved">this</span>.displayed);
+    }
+    <span class="comment">/**
+     * <span class="attrib">@return</span> {OpenLayers.Feature.Vector[]} The array of OpenLayers.Feature.Vector associated with this marker. Typically used when GeoRSS 
+     *        is connected to the marker
+     */</span>
+    <span class="reserved">this</span>.getFeatureVectors = <span class="reserved">function</span>(){
+        <span class="reserved">return</span> <span class="reserved">this</span>.featureVectors;
+    }
+
+}
+
+
+<span class="comment">/**
+ * <span class="attrib">@class</span> TimeMMarker is an MMarker with an additional associated Simile Timeline.DefaultEventSource.Event. This event 
+ *        can be used to trigger a Simile timeline to display the event. 
+ * <span class="attrib">@constructor</span>
+ * <span class="attrib">@constructor</span>
+ * <span class="attrib">@param</span> {OpenLayers.LonLat} point_in longitude/latitude location of the marker
+ * <span class="attrib">@param</span> {String} html_in HTML text to be displayed in the associated popup
+ * <span class="attrib">@param</span> {OpenLayers.Icon} icon_in Icon for marker
+ * <span class="attrib">@param</span> {Timeline.DefaultEventSource.Event} Timeline event this marker is associated with
+ * <span class="attrib">@param</span> {Timeline._Band} Timeline band this marker's event is located in
+ * <span class="attrib">@param</span> {OpenLayers.Layer} layer_in Layer for the popup feature to be displayed on (typically a WMS layer)
+ * <span class="attrib">@param</span> {OpenLayers.Feature.Vector} featureVectors_in Array of feature vectors associated with the marker 
+ *        (typically geoRSS). May be null
+ * <span class="attrib">@param</span> {Function} callBack function to call when map marker is clicked
+ */</span>
+TimeMMarker = <span class="reserved">function</span>(id, point_in, html_in, icon_in, evt_in, evtBand_in, layer_in, featureVectors_in, callBack){
+    <span class="reserved">this</span>.base = MMarker;
+    <span class="reserved">this</span>.base(id, point_in, html_in, icon_in, layer_in, featureVectors_in, callBack);
+    
+	<span class="comment">/**
+	 * <span class="attrib">@type</span> {Timeline.DefaultEventSource.Event}
+	 */</span>
+    <span class="reserved">this</span>.tevt = evt_in;
+	<span class="comment">/**
+	 * <span class="attrib">@type</span> {Timeline._Band}
+	 */</span>
+    <span class="reserved">this</span>.evtBand = evtBand_in;
+
+    <span class="comment">/**
+     * <span class="attrib">@return</span> {Timeline.DefaultEventSource.Event} The Simile Timeline.DefaultEventSource.Event associated with this marker
+     */</span>
+    <span class="reserved">this</span>.getEvent = <span class="reserved">function</span>(){
+        <span class="reserved">return</span> <span class="reserved">this</span>.tevt;
+    }
+    <span class="comment">/**
+     * <span class="attrib">@return</span> {Timeline._Band} The Simile Timeline._Band associated with this marker
+     */</span>
+    <span class="reserved">this</span>.getEventBand = <span class="reserved">function</span>(){
+        <span class="reserved">return</span> <span class="reserved">this</span>.evtBand;
+    }
+}
+TimeMMarker.<span class="reserved">prototype</span> = new MMarker;
+</pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b></b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Tue Dec 23 00:58:09 2008</div>
+</body>
+</html>
