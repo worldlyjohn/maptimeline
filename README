@@ -1,0 +1,58 @@
+MapTimeline is a Javascript library, created by John Brennan, that synchronizes OpenLayers map api with MIT's SIMILE timeline. It gives you the power to view data in both spatial and temporal context.
+
+
+Getting Started
+The download includes all the files you'll need to get up and running. This includes current versions of the dependencies we're using. These are OpenLayers 2.7 and Simile Timeline 2.2.0.
+
+It is recommended to get started with some of the basic examples first. Once you've mastered those there really are a number of things you can tweak. OpenLayers is very powerful and allows you to change and add additional layers (e.g. WMS) in addition to the basic controls. You can even use a Google or Yahoo map if you so desire.
+
+The SIMILE timeline also allows you to create new time bands, change its orientation, colors and themes among other things. For brevity I will let them show you how that's done (although I have some basic examples I've included).
+
+But the best way to learn, imo, is through example. So here they are...
+
+
+
+Examples
+A Basic MapTimeline with just 3 lines of code
+
+http://maptimeline.googlecode.com/svn/trunk/samples/basic.html
+Basic MapTimeline with some customized controls
+
+http://maptimeline.googlecode.com/svn/trunk/samples/controls.html
+MapTimeline with an additional third-party WMS layer
+
+http://maptimeline.googlecode.com/svn/trunk/samples/layers.html
+MapTimeline using a remote (AJAX) call to populate the map/timeline events
+
+http://maptimeline.googlecode.com/svn/trunk/samples/external_source.html
+
+
+
+Code
+//
+// initialize the MapTimeline component
+//
+mt = new MapTimeline();
+
+//
+// customize the map controls
+//
+mt.initMap('map');
+mt.addControl(new OpenLayers.Control.MousePosition());
+
+//
+// customize the timeline controls
+//
+mt.initTimeline('timeline');
+
+//
+// a simple way to add events (although it supports AJAX)
+//
+mt.addEvent('1', '2008-11-13 12:58Z', null, 'San Diego', 'Location where this code was developed', 32.65714, -117.241);
+mt.addEvent('2', '2008-11-15 12:58Z', null, 'Sudan', 'Don\'t forgot the conflicts in Darfur', 15, 30);
+mt.addEvent('3', '2007-02-13 12:58Z', null, 'Tibet', 'The Tibetan people are denied most rights guaranteed in the Universal Declaration of Human Rights, including the rights to self-determination, freedom of speech, assembly, movement, expression, and travel', 29.8, 83.6);
+
+
+Known Bugs
+Layers example isn't working with FF2 or 3. I think it's some permission error (had trouble with MIME-type and SVN). Will investigate because it was working when I put the examples together locally.
+
